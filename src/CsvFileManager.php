@@ -13,7 +13,7 @@ class CsvFileManager implements FileManager {
                 }
                 fclose($handle);
             }
-            return json_encode($data); // Преобразование в JSON для более удобной обработки
+            return json_encode($data); 
         } catch (Exception $e) {
             echo "Ошибка чтения файла: " . $e->getMessage();
             return null;
