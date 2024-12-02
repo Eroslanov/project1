@@ -5,8 +5,8 @@ require_once '../src/FileManagerFactory.php';
 
 // Пример 
 
-$fileType = 'json'; // Изменить на 'txt' или 'csv' по необходимости
-$filename = 'files/JsonFile.json'; // Изменить имя файла соответственно
+$fileType = 'json'; 
+$filename = 'files/JsonFile.json'; 
 
 $fileManager = FileManagerFactory::createFileManager($fileType);
 
