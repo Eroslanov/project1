@@ -1,0 +1,11 @@
+{
+  "name": "eroslanov/project1",
+  "description": "File Manager Application",
+  "require": {},
+  "authors": [
+    {
+      "name": "Eroslanov",
+      "email": "Vantwo28@gmail.com"
+    }
+  ]
+}
