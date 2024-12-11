@@ -2,9 +2,11 @@
 
 use Exception;
 
-class CsvFileManager implements FileManager {
+class CsvFileManager implements FileManager
+{
 
-    public function readFile($filename): ?string {
+    public function readFile(string $filename): ?string
+    {
         try {
             $data = [];
             if (($handle = fopen($filename, "r")) !== FALSE) {
@@ -13,14 +15,15 @@ class CsvFileManager implements FileManager {
                 }
                 fclose($handle);
             }
-            return json_encode($data); 
+            return json_encode($data);
         } catch (Exception $e) {
             echo "Ошибка чтения файла: " . $e->getMessage();
             return null;
         }
     }
 
-    public function writeFile($filename, $data): bool {
+    public function writeFile(string $filename, array $data): bool
+    {
         try {
             $fp = fopen($filename, 'w');
             foreach ($data as $fields) {
